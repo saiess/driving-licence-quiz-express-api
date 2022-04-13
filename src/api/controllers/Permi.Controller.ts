@@ -59,9 +59,7 @@ export const createQuestions = async (req: Request, res: Response) => {
     // await question.save();
     const question = await PermiModel.create(req.body);
     res.statusCode = 200;
-    res.send({
-      question: question,
-    });
+    res.send(question);
   } catch (error) {
     res.statusCode = 404;
     res.send({
