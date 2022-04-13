@@ -1,6 +1,7 @@
 import express from 'express';
 import './database';
-import router from './api/routes/Permi.routes';
+import QuestionRoutes from './api/routes/Permi.routes';
+import UserRoutes from "./api/routes/User.routes";
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
@@ -11,7 +12,8 @@ app.use(cors());
 
 
 // ** routes //
-app.use('/question', router);
+app.use('/question', QuestionRoutes);
+app.use('/user', UserRoutes);
 
 
 app.listen(process.env.PORT, () => {

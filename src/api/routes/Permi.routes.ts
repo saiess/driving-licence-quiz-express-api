@@ -1,13 +1,13 @@
 import express from 'express';
 import {createQuestions, deleteQuestions, getAllQuestions, getOneQuestions} from '../controllers/Permi.Controller';
 
-const router = express.Router();
+const QuestionRoutes = express.Router();
 
 
-router.get('/all', getAllQuestions);
-router.post('/create', createQuestions);
-router.delete('/delete/:id', deleteQuestions);
-router.get('/one/:id', getOneQuestions);
+QuestionRoutes.get('/all', getAllQuestions);
+QuestionRoutes.post('/create', createQuestions);
+QuestionRoutes.delete('/delete/:id', deleteQuestions);
+QuestionRoutes.get('/one/:id', getOneQuestions);
 
 
-export default router;
+export default QuestionRoutes;
