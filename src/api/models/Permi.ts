@@ -28,6 +28,10 @@ export const PermiSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    vehicletype: {
+          type: String,
+          required: true,
+    },
   },
   { timestamps: true }
 );
